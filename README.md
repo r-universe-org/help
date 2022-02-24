@@ -9,6 +9,21 @@ This repository is intended for getting help and suggestions related to the [r-u
 
 We will try to address issues, but do note that R-universe is a still in early development, with limited human capacity, so please be patient.
 
+## How to enable your personal universe
+
+To setup a universe for your own GitHub user or organization:
+
+1. Create a repository called `universe` on the GitHub account for which you want to create a universe. The repository must contain a file called [packages.json](https://github.com/r-universe-org/demo-registry/blob/master/packages.json) in the standard format, defining the package and git url for the packages you want to include. For example: https://github.com/maelle/universe. Start by adding no more than a few packages, you can add more later.
+
+2. Install the [r-universe app](https://github.com/apps/r-universe/installations/new) on the GitHub account that you want to enable. Choose __enable for all repositories__ when asked.
+
+3. After a few minutes, your source universe will appear on: `https://github.com/r-universe/:yourname`
+
+4. The universe automatically starts building the packages from your registry. In addition, it will include packages that referenced as Remotes in the description file of one of those packages.
+
+5. The universe automatically syncs and builds your package git repos once per hour.
+If you encounter any issues, the actions tab in your source universe may show what is going on, for example: https://github.com/r-universe/maelle/actions
+
 
 ## FAQ
 
