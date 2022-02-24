@@ -10,7 +10,9 @@ Do note that R-universe is a still in early development, with limited human capa
 
 ## What is r-universe
 
-The r-universe platform is a new umbrella project by rOpenSci under which we experiment with various new ideas for improving publication and discovery of research software and other a in R. The system consists of several components and subprojects, that come together on the front-end dashboard on https://r-universe.dev. For more information see the rOpenSci website: https://ropensci.org/r-universe/
+The r-universe platform is a new umbrella project by rOpenSci under which we experiment with various new ideas for improving publication and discovery of research software and other a in R. The system consists of several components and subprojects, that come together on the front-end dashboard on https://r-universe.dev.
+
+For more information see the rOpenSci website: https://ropensci.org/r-universe/
 
 
 ## How to install R packages from r-universe?
@@ -65,7 +67,7 @@ Once you have validated your email address on GitHub, subsequent builds of R pac
 
 ## My profile picture or contributor statistics do not show up
 
-Same as 1. If no picture shows up, you need to register the email address that you use as R package maintainer in your [GitHub settings](https://github.com/settings/emails), and wait for the package to be rebuilt.
+Same as above. If no picture shows up, you probably need to register the email address that you use as R package maintainer in your [GitHub settings](https://github.com/settings/emails), and wait for the package to be rebuilt.
 
 
 ## How to get a package logo shown in the packages tab
