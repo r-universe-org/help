@@ -82,10 +82,9 @@ See this blog post: [How to create your personal CRAN-like repository on R-unive
 
 ## It is possible to customize the package build process with custom options/tools/variables
 
-No, that is not possible right now. This is on purpose: we want to make sure that the packages deployed on r-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.
+No, that is not possible. Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on r-universe.
 
-Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on r-universe.
-
+This is on purpose: we want to make sure that the packages deployed on r-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.
 
 ## How to publish vignettes/articles which require custom software/tokens to render
 
