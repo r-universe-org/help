@@ -1,13 +1,12 @@
 # Questions, Bugs, and Discussions
 
-## Resources
-
 This repository is intended for getting help and suggestions related to the [r-universe](https://r-universe.dev) project:
 
  - [issues](https://github.com/r-universe-org/bugs/issues) 
  - [discussions](https://github.com/r-universe-org/bugs/discussions)
+ - [project homepage](https://ropensci.org/r-universe/)
 
-We will try to address issues, but do note that R-universe is a still in early development, with limited human capacity, so please be patient.
+Do note that R-universe is a still in early development, with limited human capacity.
 
 ## What is r-universe
 
