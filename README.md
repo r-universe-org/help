@@ -1,4 +1,4 @@
-# Bugs, Support and Discussions
+# Questions, Bugs, and Discussions
 
 ## Resources
 
