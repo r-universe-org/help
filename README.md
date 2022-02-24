@@ -42,7 +42,7 @@ install.packages(c("magick", "openssl", "pdftools", "drake"))
 
 ## How to setup your personal universe
 
-To setup a universe for your own GitHub user or organization:
+See also this blog post: [How to create your personal CRAN-like repository on R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/). In a nutshell:
 
 1. Create a repository called `universe` on the GitHub account for which you want to create a universe. The repository must contain a file called [packages.json](https://github.com/r-universe-org/demo-registry/blob/master/packages.json) in the standard format, defining the package and git url for the packages you want to include. For example: https://github.com/maelle/universe. Start by adding no more than a few packages, you can add more later.
 
