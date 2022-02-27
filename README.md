@@ -102,7 +102,7 @@ R-universe does not archive old versions of packages, but we have something bett
 
 ## How does r-universe analyze system dependencies (C/C++)
 
-We use the maketools package:
+After the package has been installed, we use maketools to show external libraries that the package links to:
 
 ```r
 maketools::package_sysdeps("sf")
@@ -113,6 +113,6 @@ maketools::package_sysdeps("sf")
 ## 4 libstdc++.so.6.0.28   libstdc++6        <NA>    gcc 10-20200411-0ubuntu1
 ```
 
-Important to understand is that this does __not__ use heuristics or guessing based on the package description. Instead, it calls `ldd` on the installed R package to see which shared libraries it links to (the 1st column above). Then it uses the distro package manager (e.g. `dpkg`) to query which runtime package this shlib belongs to (the 2nd column), and the corresponding headers and source package.
+In a nutshell, maketools calls `ldd` on the installed R package to see which `.so` files are linked (the 1st column above). Then it uses the distro package manager (e.g. `dpkg`) to query the runtime package deb that provides this file (the 2nd column), and the corresponding headers and source packages. So to emphasize, this does __not__ use heuristics / guessing based on the package description.
 
 The maketools vignette explains this in more detail: [Automatically determine run-time dependencies for R packages on Linux](https://cran.r-project.org/web/packages/maketools/vignettes/sysdeps.html)
