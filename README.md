@@ -100,4 +100,19 @@ No. R-universe is an open publishing system. The system just builds and deploys 
 R-universe does not archive old versions of packages, but we have something better: we track the upstream git url and commit-id in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/) 
 
 
+## How does r-universe analyze system dependencies (C/C++)
 
+We use the maketools package:
+
+```r
+maketools::package_sysdeps("sf")
+##                 shlib      package     headers source              version
+## 1   libproj.so.15.3.1    libproj15 libproj-dev   proj              6.3.1-1
+## 2   libgdal.so.26.0.4    libgdal26 libgdal-dev   gdal   3.0.4+dfsg-1build3
+## 3 libgeos_c.so.1.13.1 libgeos-c1v5 libgeos-dev   geos        3.8.0-1build1
+## 4 libstdc++.so.6.0.28   libstdc++6        <NA>    gcc 10-20200411-0ubuntu1
+```
+
+Important to understand is that this does __not__ use heuristics or guessing based on the package description. Instead, it calls `ldd` on the installed R package to see which shared libraries it links to (the 1st column above). Then it uses the distro package manager (e.g. `dpkg`) to query which runtime package this shlib belongs to (the 2nd column), and the corresponding headers and source package.
+
+The maketools vignette explains this in more detail: [Automatically determine run-time dependencies for R packages on Linux](https://cran.r-project.org/web/packages/maketools/vignettes/sysdeps.html)
