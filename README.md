@@ -8,6 +8,8 @@ This repository is intended for getting help and suggestions related to the [r-u
 
 Do note that R-universe is a still in early development, with limited human capacity.
 
+Some frequently asked questions are answered below!
+
 ## What is r-universe
 
 The r-universe platform is a new umbrella project by rOpenSci under which we experiment with various new ideas for improving publication and discovery of research software and other a in R. The system consists of several components and subprojects, that come together on the front-end dashboard on https://r-universe.dev.
