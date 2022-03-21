@@ -116,3 +116,10 @@ maketools::package_sysdeps("sf")
 In a nutshell, maketools calls `ldd` on the installed R package to see which `.so` files are linked (the 1st column above). Then it uses the distro package manager (e.g. `dpkg`) to query the runtime package deb that provides this file (the 2nd column), and the corresponding headers and source packages. So to emphasize, this does __not__ use heuristics / guessing based on the package description.
 
 The maketools vignette explains this in more detail: [Automatically determine run-time dependencies for R packages on Linux](https://cran.r-project.org/web/packages/maketools/vignettes/sysdeps.html)
+
+## How to add keyword labels to an R package?
+
+If the R package is hosted on GitHub you can add keywords by configuring [repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics). Alternatively, you can specify keywords in the `X-schema.org-keywords` field in your package `DESCRIPTION` file. This field [is permitted on CRAN](https://cs.github.com/?q=org%3Acran+X-schema.org-keywords) as well.
+
+The build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like `c++` or `openmp`.
+
