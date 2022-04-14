@@ -12,7 +12,7 @@ Some frequently asked questions are answered below!
 
 ## What is r-universe
 
-The r-universe platform is a new umbrella project by rOpenSci under which we experiment with various new ideas for improving publication and discovery of research software and other a in R. The system consists of several components and subprojects, that come together on the front-end dashboard on https://r-universe.dev.
+The r-universe platform is a new umbrella project by rOpenSci under which we experiment with various new ideas for improving publication and discovery of research software and other research material in R. The system consists of several components and subprojects, that come together on the front-end dashboard on https://r-universe.dev.
 
 For more information see the rOpenSci website: https://ropensci.org/r-universe/
 
