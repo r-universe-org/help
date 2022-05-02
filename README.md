@@ -74,7 +74,7 @@ Same as above. If no picture shows up, you probably need to register the email a
 
 ## How to get a package logo shown in the packages tab
 
-We use the same conventions as pkgdown to find a logo for the package. It either needs to be in one of the locations checked by `pkgdown:::find_logo()` or set as an opengraph image in your `_pkgdown.yml`.
+We use the same conventions as pkgdown to find a logo for the package. It either needs to be in one of the locations checked by `pkgdown:::find_logo()` (`man/figures/logo.png` and `man/figures/logo.svg`) or set as an opengraph image in your `_pkgdown.yml`.
 
 
 ## How to add custom packages to r-universe
