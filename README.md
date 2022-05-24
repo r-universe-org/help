@@ -125,13 +125,13 @@ If the R package is hosted on GitHub you can add keywords by configuring [reposi
 
 The build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like `c++` or `openmp`.
 
-## How are the dependencies / dependents calculated ?
+## How are the dependencies / dependents calculated?
 
 Both are calculated using transitive (recursive) strong dependencies, hence this includes both direct and indirect dependencies. Or in practical terms: other packages that need to be installed at minimum to be able to use the target package.
 
 At package build time, we use `tools::package_dependencies(pkg, recursive = TRUE)` to derive the list of hard dependencies and store this in the database. R-base packages are not included. The `dependencies` value is simply the size of this list. The `dependents` value is the opposite: this is the number of packages in R-universe which list the target package as one of its dependencies.
 
-## How is the package-rank score calculated>
+## How is the package-rank score calculated?
 
 The exact algorith is very much WIP and will change. Right now it is a combination of:
 
