@@ -82,7 +82,7 @@ We use the same conventions as pkgdown to find a logo for the package. It either
 See this blog post: [How to create your personal CRAN-like repository on R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
 
 
-## It is possible to customize the package build process with custom options/tools/variables
+## Is it possible to customize the package build process with custom options/tools/variables
 
 No, that is not possible. Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on r-universe.
 
