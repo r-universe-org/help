@@ -10,7 +10,7 @@ Do note that R-universe is a still in early development, with limited human capa
 
 Some frequently asked questions are answered below!
 
-## What is r-universe
+## What is r-universe?
 
 The r-universe platform is a new umbrella project by rOpenSci under which we experiment with various new ideas for improving publication and discovery of research software and other research material in R. The system consists of several components and subprojects, that come together on the front-end dashboard on https://r-universe.dev.
 
@@ -31,7 +31,7 @@ install.packages('curl', repos =
   c('https://jeroen.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
-Alternatively you can set `options(repos)` to enable favoriate repositories by default:
+Alternatively you can set `options(repos)` to enable favorite repositories by default:
 
 ```r
 # Enable multiple universes
