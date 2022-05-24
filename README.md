@@ -129,7 +129,7 @@ The build system may also add some keywords automatically based on analysis of t
 
 Both are calculated using transitive (recursive) strong dependencies, hence this includes both direct and indirect dependencies. Or in practical terms: other packages that need to be installed at minimum to be able to use the target package.
 
-At package build time, we use `tools::package_dependencies(pkg, recursive = TRUE)` to derive the list of hard dependencies and store this in the database. R-base packages are not included. The `dependencies` value is simply the size of this list. The `dependents` value is the opposite: this is the number of packages in R-universe which list the target package as one of it's dependencies.
+At package build time, we use `tools::package_dependencies(pkg, recursive = TRUE)` to derive the list of hard dependencies and store this in the database. R-base packages are not included. The `dependencies` value is simply the size of this list. The `dependents` value is the opposite: this is the number of packages in R-universe which list the target package as one of its dependencies.
 
 ## How is the package-rank score calculated>
 
