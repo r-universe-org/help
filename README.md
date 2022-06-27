@@ -63,7 +63,7 @@ If you encounter any issues, the actions tab in your source universe may show wh
 
 ## How to link a maintainer email addresses to a username on r-universe
 
-We use the GitHub username that is associated with a given email address. If the email address that you use in the R package maintainer field, or in commits, is the same as your GitHub account, evertying just works. If you use different email addresses, you can easily add additional email addresses in your [GitHub settings](https://github.com/settings/emails).
+We use the GitHub username that is associated with a given email address. If the email address that you use in the R package maintainer field, or in commits, is the same as your GitHub account, everything just works. If you use different email addresses, you can easily add additional email addresses in your [GitHub settings](https://github.com/settings/emails).
 
 Once you have validated your email address on GitHub, subsequent builds of R packages will be able to associate the package and contributions to your user account. We collect statistics during the build process, so the changes will not become visible until the next build of each package.
 
