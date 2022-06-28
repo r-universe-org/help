@@ -141,3 +141,9 @@ The exact algorith is very much WIP and will change. Right now it is a combinati
  - Commit activity over the last year
 
 The score is a weighted sum of the above, on a log scale. But we plan to improve the algorithm as the project gets more mature, and better data becomes available.
+
+## Why is a package sometimes listed twice?
+
+If a source package fails to build (which means something is very wrong) then you see a red “build failure” message.
+If there was a previous successful build, it is kept there as well for users to install.
+
