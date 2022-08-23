@@ -81,6 +81,9 @@ We use the same conventions as pkgdown to find a logo for the package. It either
 
 See this blog post: [How to create your personal CRAN-like repository on R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
 
+## How to prevent a CRAN/BioC package from automatically being indexed by r-universe
+
+CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by r-universe. To prevent this, add a line to the package DESCRIPTION file with: `Config/runiverse/noindex: true` (Config/ field names are allowed on CRAN). The r-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from r-universe.
 
 ## Is it possible to customize the package build process with custom options/tools/variables
 
