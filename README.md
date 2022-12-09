@@ -150,3 +150,19 @@ The score is a weighted sum of the above, on a log scale. But we plan to improve
 If a source package fails to build (which means something is very wrong) then you see a red “build failure” message.
 If there was a previous successful build, it is kept there as well for users to install.
 
+## Does R-universe have Linux binaries?
+
+Yes, but right now we only provide binaries for a single linux target: `r-release` on `ubuntu:latest`. This is the platform that the r-universe build system itself runs via the [base-image](https://github.com/r-universe-org/base-image), and we use these binaries when installing dependencies of a package.
+
+
+To use these binaries on Linux you need to add the corresponding repository to your `repos`. It is not needed to set a custom UserAgent. For example for the `jeroen` universe:
+
+```r
+options(repos = c(
+  linux = 'https://jeroen.r-universe.dev/bin/linux/jammy/4.2/',
+  sources = 'https://jeroen.r-universe.dev',
+  cran = 'https://cloud.r-project.org'
+))
+```
+
+See how [this is done automatically in the base image](https://github.com/r-universe-org/base-image/blob/f20ec9fc6f51ef8a89aad489206a43790bd9bf77/Rprofile#L10-L16) when an environment variable `MY_UNIVERSE` is set.
