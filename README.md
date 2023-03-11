@@ -166,3 +166,12 @@ options(repos = c(
 ```
 
 See how [this is done automatically in the base image](https://github.com/r-universe-org/base-image/blob/f20ec9fc6f51ef8a89aad489206a43790bd9bf77/Rprofile#L10-L16) when an environment variable `MY_UNIVERSE` is set.
+
+## Which packages get included in search?
+
+In r-universe, a given R package can be included in many different registries. To prevent duplicates, search only shows packages from the universes of the upstream github owners of the package, and not from 3rd parties that have added a copy of the package to their registry.
+
+More specifically, search results include packages for which:
+
+ - The github owner is the same as the universe, for example packages under `https://jeroen.r-universe.dev` from GitHub user `https://github.com/jeroen/`. This also includes all CRAN packages.
+ - Alternatively: to opt-in packages for which the universe name is different from the GitHub owner, the package author must include the full `user.r-universe.dev` in the URL field of the DESCRIPTION file. For example, if the registry from `https://jeroen.r-universe.dev` has a package `https://github.com/elsewhere/mypkg`, but the URL field in the DESCRIPTION includes e.g. `https://jeroen.r-universe.dev` or `https://jeroen.r-universe.dev/mypkg`, then it also shows up in the search results.
