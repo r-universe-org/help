@@ -175,3 +175,14 @@ More specifically, search results include packages for which:
 
  - The github owner is the same as the universe, for example packages under `https://jeroen.r-universe.dev` from GitHub user `https://github.com/jeroen/`. This also includes all CRAN packages.
  - Alternatively: to opt-in packages for which the universe name is different from the GitHub owner, the package author must include the full `user.r-universe.dev` in the URL field of the DESCRIPTION file. For example, if the registry from `https://jeroen.r-universe.dev` has a package `https://github.com/elsewhere/mypkg`, but the URL field in the DESCRIPTION includes e.g. `https://jeroen.r-universe.dev` or `https://jeroen.r-universe.dev/mypkg`, then it also shows up in the search results.
+
+## How to link to your r-universe on common websites
+
+**Hugo Academic Theme**: To display the rocket icon hyperlinked to your r-universe in your social icons below your photo add the following code to the social section of *content/authors/admin/_index.md* (or the *_index.md* file for the relevant author), replacing `username` with the relevant user or organisation name.
+
+```md
+social:
+- icon: rocket
+  icon_pack: fa
+  link: https://username.r-universe.dev/
+```
