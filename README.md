@@ -167,6 +167,17 @@ options(repos = c(
 
 See how [this is done automatically in the base image](https://github.com/r-universe-org/base-image/blob/f20ec9fc6f51ef8a89aad489206a43790bd9bf77/Rprofile#L10-L16) when an environment variable `MY_UNIVERSE` is set.
 
+## How to use WebAssembly Binaries
+
+We have experimental support for webassembly binaries! You should use the official [r-wasm repository](https://repo.r-wasm.org) for dependencies. For example to install the dev version of dplyr:
+
+```r
+install.packages('dplyr',
+  repos = c('https://tidyverse.r-universe.dev', 'https://repo.r-wasm.org'))
+```
+
+You can test them in the [webr demo page](https://webr.r-wasm.org/latest/). Note that this is experimental and not all R packages can be built for wasm.
+
 ## Which packages get included in search?
 
 In r-universe, a given R package can be included in many different registries. To prevent duplicates, search only shows packages from the universes of the upstream github owners of the package, and not from 3rd parties that have added a copy of the package to their registry.
