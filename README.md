@@ -159,7 +159,7 @@ To use these binaries on Linux you need to add the corresponding repository to y
 
 ```r
 options(repos = c(
-  linux = 'https://jeroen.r-universe.dev/bin/linux/jammy/4.3/',
+  linux = 'https://jeroen.r-universe.dev/bin/linux/noble/4.4/',
   sources = 'https://jeroen.r-universe.dev',
   cran = 'https://cloud.r-project.org'
 ))
