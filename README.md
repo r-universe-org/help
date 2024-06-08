@@ -138,7 +138,7 @@ At package build time, we use `tools::package_dependencies(pkg, recursive = TRUE
 
 The exact algorith is very much WIP and will change. Right now it is a combination of:
 
- - Number of dependents (aka recursive reverse depenencies)
+ - Number of dependents (aka recursive reverse dependencies)
  - Number of Github stars
  - Number of unique contributors
  - Commit activity over the last year
