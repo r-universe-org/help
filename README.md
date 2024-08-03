@@ -52,7 +52,7 @@ See also this blog post: [How to create your personal CRAN-like repository on R-
 
 2. Install the [r-universe app](https://github.com/apps/r-universe/installations/new) on the GitHub account that you want to enable. Choose __enable for all repositories__ when asked.
 
-3. After a few minutes, your source universe will appear on: `https://github.com/r-universe/:username`
+3. After a few minutes, your source universe will appear on: `https://github.com/r-universe/<username>`
 
 4. The universe automatically starts building the packages from your registry. In addition, it will include packages that referenced as Remotes in the description file of one of those packages.
 
